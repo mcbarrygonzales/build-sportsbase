@@ -95,14 +95,14 @@
           loadingBar.style.display = "none";
 
 
-          var isMobile = false;
+          var isMobile = "false";
           if (/Mobi/.test(navigator.userAgent))
           {
-            isMobile = true;
+            isMobile = "true";
           }
           else
           {
-            isMobile = false;
+            isMobile = "false";
           }
 
           unityInstance.SendMessage("Device Checker", "CheckDevice", isMobile);
