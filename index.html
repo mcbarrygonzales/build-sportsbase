@@ -93,6 +93,18 @@
         }).then((unityInstance) => {
           this.unityInstance = unityInstance;
           loadingBar.style.display = "none";
+
+
+          if (/Mobi/.test(navigator.userAgent))
+          {
+            unityInstance.SendMessage("Device Checker", "CheckDevice", true);
+          } else
+          {
+            unityInstance.SendMessage("Device Checker", "CheckDevice", false);
+          }
+
+
+
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
