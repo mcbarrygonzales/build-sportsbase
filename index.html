@@ -106,7 +106,7 @@
           }
 
           unityInstance.SendMessage("Device Checker", "CheckDevice", isMobile);
-          unityInstance.SendMessage("Data Manager", "CheckProfileExistence");
+          unityInstance.SendMessage("Server", "CheckExistence");
 
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
